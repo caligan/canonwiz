@@ -1,0 +1,6 @@
+access all books:
+  title: '(incomplete) Access all Books in search'
+some other permission:
+  title: 'This is a demonstration restrict-access permission'
+  restrict access: true
+

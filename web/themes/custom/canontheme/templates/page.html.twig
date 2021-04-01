@@ -1,0 +1,92 @@
+{#
+/**
+ * @file
+ * Available variables:
+ *
+ * General utility variables:
+ * - base_path: The base URL path of the Drupal installation. Will usually be
+ *   "/" unless you have installed Drupal in a sub-directory.
+ * - is_front: A flag indicating if the current page is the front page.
+ * - logged_in: A flag indicating if the user is registered and signed in.
+ * - is_admin: A flag indicating if the user has permission to access
+ *   administration pages.
+ *
+ * Site identity:
+ * - front_page: The URL of the front page. Use this instead of base_path when
+ *   linking to the front page. This includes the language domain or prefix.
+ *
+ * Page content (in order of occurrence in the default page.html.twig):
+ * - node: Fully loaded node, if there is an automatically-loaded node
+ *   associated with the page and the node ID is the second argument in the
+ *   page's path (e.g. node/12345 and node/12345/revisions, but not
+ *   comment/reply/12345).
+ *
+ * Regions:
+ * - page.header: Items for the header region.
+ * - page.banner: Items for the banner region.
+ * - page.menu_bar: Items for the main menu region.
+ * - page.breadcrumb: Items for the breadcrumb region.
+ * - page.help: Items for the help region.
+ * - page.pre_content: Items for the pre-content region.
+ * - page.content: The main content of the current page.
+ * - page.sidebar_first: Items for the first sidebar.
+ * - page.sidebar_second: Items for the second sidebar.
+ * - page.footer_first: Items for the first footer column.
+ * - page.footer_second: Items for the second footer column.
+ * - page.footer_third: Items for the third footer column.
+ *
+ * @see template_preprocess_page()
+ * @see html.html.twig
+ */
+#}
+<div id="page-wrapper">
+  <div id="page">
+
+    <div id="main-wrapper" class="layout-main-wrapper layout-container clearfix">
+      <div id="main" class="layout-main clearfix">
+        <main id="content" class="column main-content" role="main">
+
+          {% if page.pre_content %}
+            <section class="section">
+              {{ page.pre_content }}
+            </section>
+          {% endif %}
+
+          {% if page.content %}
+            <section class="section">
+              <a id="main-content" tabindex="-1"></a>
+              {{ page.content }}
+            </section>
+          {% endif %}
+
+        </main>
+      </div>
+    </div>
+
+    {% if page.sidebar_first %}
+      <div id="sidebar-first" class="column sidebar">
+        <aside class="section" role="complementary">
+          {{ page.sidebar_first }}
+        </aside>
+      </div>
+    {% endif %}
+
+    {% if page.sidebar_second %}
+      <div id="sidebar-second" class="column sidebar">
+        <aside class="section" role="complementary">
+          {{ page.sidebar_second }}
+        </aside>
+      </div>
+    {% endif %}
+
+  </div>
+</div>
+
+<footer>
+  {% if page.footer_first %}
+    {{ page.footer_first }}
+  {% endif %}
+  {% if page.footer_second %}
+    {{ page.footer_second }}
+  {% endif %}
+</footer>

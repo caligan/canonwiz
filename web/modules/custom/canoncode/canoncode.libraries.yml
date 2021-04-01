@@ -1,0 +1,13 @@
+# https://www.drupal.org/docs/8/creating-custom-modules/adding-stylesheets-css-and-javascript-js-to-a-drupal-8-module
+
+canoncode:
+  version: 1.x
+  css:
+    theme:
+      css/canoncode.css: {}
+  js:
+    js/canoncode.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupalSettings
+

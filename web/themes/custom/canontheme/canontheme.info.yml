@@ -1,0 +1,19 @@
+name: Loose Canon theme 
+type: theme
+description: 'Loose Canon custom theme'
+core: 8.x
+base theme: seven
+
+libraries:
+  - canontheme/global-styling
+
+regions:
+  pre_content: 'Pre-content'
+  content: 'Content'
+  sidebar_first: 'First sidebar'
+  sidebar_second: 'Second sidebar'
+  footer_first: 'First footer'
+  footer_second: 'Second footer'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+

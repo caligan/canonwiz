@@ -1,0 +1,9 @@
+name: Loose Canon custom code
+description: Custom code for Loose Canon.
+type: module
+core: 8.x
+package: Loose Canon
+version: 8.x-1.x
+
+# configure: canoncode.admin_config
+
